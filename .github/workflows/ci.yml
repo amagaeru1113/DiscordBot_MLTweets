@@ -24,4 +24,8 @@ jobs:
             - name: Run py
               env:
                 DISCORD_CHANNEL_WEBHOOK: ${{ secrets.DISCORD_CHANNEL_WEBHOOK }}
-              run: python hello.py $DISCORD_CHANNEL_WEBHOOK
+                TWITTER_API_KEY: ${{ secrets.TWITTER_API_KEY }}
+                TWITTER_API_TOKEN: ${{ secrets.TWITTER_API_TOKEN}}
+                TWITTER_SECRET_KEY: ${{ secrets.TWITTER_SECRET_KEY}}
+                TWITTER_SECRET_TOKEN: ${{ secrets.TWITTER_SECRET_TOKEN}}
+              run: python pushMLTweets.py $DISCORD_CHANNEL_WEBHOOK $TWITTER_API_KEY $TWITTER_API_TOKEN $TWITTER_SECRET_KEY $TWITTER_SECRET_TOKEN
