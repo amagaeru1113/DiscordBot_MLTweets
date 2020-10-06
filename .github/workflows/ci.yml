@@ -24,4 +24,4 @@ jobs:
             - name: Run py
               env:
                 DISCORD_CHANNEL_WEBHOOK: ${{ secrets.DISCORD_CHANNEL_WEBHOOK }}
-              run: python hello.py DISCORD_CHANNEL_WEBHOOK
+              run: python hello.py $DISCORD_CHANNEL_WEBHOOK
