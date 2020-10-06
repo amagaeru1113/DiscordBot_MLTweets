@@ -1,7 +1,7 @@
 name: Sent Tweets News
 on:
     schedule:
-        - cron: '/5 * * * *'
+        - cron: '/4 * * * *'
 
 jobs:
     sent:
