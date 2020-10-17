@@ -1,32 +1,8 @@
-import dataclasses
 import sys
 
 import toml
 
-
-@dataclasses.dataclass(frozen=True)
-class AuthInfo:
-    api_key: str
-    api_secret: str
-    access_token: str
-    access_token_secret: str
-    resource_url: str
-
-
-@dataclasses.dataclass(frozen=True)
-class QueryInfo:
-    tweet_count: str
-    account_name: str
-
-
-@dataclasses.dataclass(frozen=True)
-class Secrets:
-    webhook_url: str
-    api_key: str
-    api_secret: str
-    access_token: str
-    access_token_secret: str
-    resource_url: str
+from my_dataclasses import AuthInfo, QueryInfo, Secrets
 
 
 class ConfigFromToml(object):
@@ -54,7 +30,6 @@ class ConfigForUseTwitterAPI(ConfigFromToml):
         self.resource_url = secrets.resource_url
 
     def _api_auth_info(self):
-
         api_auth_info = AuthInfo(
             api_key=self.api_key,
             api_secret=self.api_secret,

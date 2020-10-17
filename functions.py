@@ -1,13 +1,7 @@
 import json
-import dataclasses
 from requests_oauthlib import OAuth1Session  # type: ignore
 
-
-@dataclasses.dataclass(frozen=True)
-class TweetInfo:
-    user_name: str
-    tweet_text: str
-    created_at: str
+from my_dataclasses import TweetInfo
 
 
 def _setAuth(api_auth_info):
