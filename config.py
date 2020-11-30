@@ -2,7 +2,7 @@ import sys
 
 import toml
 
-from my_dataclasses import AuthInfo, QueryInfo, Secrets
+from my_dataclasses import AuthInfo, Secrets
 
 
 class ConfigFromToml(object):

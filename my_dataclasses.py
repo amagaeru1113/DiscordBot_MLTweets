@@ -18,12 +18,6 @@ class AuthInfo:
 
 
 @dataclasses.dataclass(frozen=True)
-class QueryInfo:
-    tweet_count: str
-    account_name: str
-
-
-@dataclasses.dataclass(frozen=True)
 class Secrets:
     webhook_url: str
     api_key: str
