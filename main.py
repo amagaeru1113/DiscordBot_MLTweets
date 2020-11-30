@@ -1,7 +1,6 @@
 import base64
 import sys
 
-import toml
 import tweepy
 from discordwebhook import Discord
 
