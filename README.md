@@ -2,7 +2,9 @@
 
 ## 概要
 - 毎朝9時に実行
-- Twitterから指定したキーワード（現在は「機械学習」）に関するツイートを100件取得し、favoriteが5以上のtweetをDiscordに投稿するbot
+- Twitterから指定したキーワード（現在は「機械学習」）に関するツイートを100件取得し、次の条件を満たすものをDiscordに投稿するbot
+    - favoriteが5以上
+    - urlが存在する
 
 ## ファイル
 - py
@@ -12,8 +14,6 @@
     - main: tweet取得、discordへの投稿の実行
 - toml
     - pyproject: poetryの設定
-- txt
-    - requirements: workflowで使用するライブラリ
 
 ## 必要な情報
 

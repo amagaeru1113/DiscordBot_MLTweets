@@ -10,7 +10,6 @@ from my_dataclasses import Tweet, Secrets
 
 
 def tweets_with_keyword(keyword: str, maxTweets: int, secrets: Secrets):
-
     config_for_use_twitter_api = ConfigForUseTwitterAPI(secrets)
     api_auth_info = config_for_use_twitter_api._api_auth_info()
     auth = tweepy.OAuthHandler(api_auth_info.api_key, api_auth_info.api_secret)

@@ -1,4 +1,5 @@
 import json
+
 from requests_oauthlib import OAuth1Session  # type: ignore
 
 from my_dataclasses import TweetInfo
@@ -19,7 +20,9 @@ def _setRequest(twitter_auth, resource_url, params):
 def _setResponce(request):
     responced_tweets = {}
 
-    if request.status_code == 200:
+    if request.status_code != 200:
+        return responced_tweets
+    else:
         res = json.loads(request.text)
 
         for idx, line in enumerate(res):
@@ -30,6 +33,4 @@ def _setResponce(request):
                 created_at=line["created_at"],
             )
             responced_tweets[key] = tweet_info
-        return responced_tweets
-    else:
-        return responced_tweets
+        return responced_tweets        

@@ -6,7 +6,7 @@ from my_dataclasses import AuthInfo, Secrets
 
 
 class ConfigFromToml(object):
-    def __init__(self, secrets: Secrets,) -> None:
+    def __init__(self, secrets: Secrets) -> None:
         self.api_key = secrets.api_key
         self.api_secret = secrets.api_secret
         self.access_token = secrets.access_token
@@ -37,7 +37,6 @@ class ConfigForUseTwitterAPI(ConfigFromToml):
             access_token_secret=self.access_token_secret,
             resource_url=self.resource_url,
         )
-
         return api_auth_info
 
 
